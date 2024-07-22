@@ -1,0 +1,27 @@
+Description-
+
+1- App.js page Explanation- 
+    -App component sets up the overall structure of the application.
+	-Uses BrowserRouter from react-router-dom to provide routing capabilities.
+	-nav element contains two Link components (<Link to="/"> and <Link to="/new-item">) that navigate to different paths defined in the Route components.
+	-Switch component renders the first Route that matches the current location.
+	-<Route path="/new-item"> renders NewItemPage component when the path matches /new-item.
+	-<Route path="/"> renders LandingPage component for the home path (/).
+2- Landing Page Explanation-
+	-LandingPage component displays a list of orders.
+	-Uses useState hook to manage orders state, initialized with an array of sample orders.
+	-handleDelete function removes an order from orders state array when the delete button is clicked.
+	-Renders each order in an ul list with li elements.
+	-Displays order details (fullName, description, quantity) and a delete button for each order.
+3- New page Explanation-
+	-NewItemPage component provides a form to add a new order.
+	-Uses Formik component to manage form state, validation, and submission.
+	-initialValues object initializes form fields (firstName, lastName, description, quantity) with empty values.
+	-onSubmit function handles form submission logic (e.g., logging values for demo).
+	-validate function defines validation rules for form fields (lastName, description, quantity), ensuring they meet specified criteria (e.g., required, character limits, numeric range).
+	-Field and ErrorMessage components from formik are used for rendering form fields and validation errors respectively.
+Overall Explanation-	
+		-The provided React code sets up a basic application for managing orders.
+		-App.js defines routing using react-router-dom, enabling navigation between LandingPage and NewItemPage.
+		-LandingPage.js displays a list of orders with delete functionality.
+		-NewItemPage.js provides a form for adding new orders with input validation.
